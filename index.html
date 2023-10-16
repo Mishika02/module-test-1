@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box-1">
+            <div class="text">
+                ROCK<br>PAPER<br>SCISSORS
+            </div>
+            <div class="score">
+                <div class="computer-score">
+                    COMPUTER SCORE
+                    <div class="counter-1" id="computerCurrentscore" placeholder="0">0</div>
+                </div>
+                <div class="your-score">
+                    YOUR<br>SCORE
+                    <div class="counter-1" id="userCurrentscore" placeholder="0">0</div>
+                    <!-- <input class="counter-2" type="text" placeholder="0"> -->
+                </div>
+            </div>
+        </div>
+
+        <div onclick="toggleDivs()" id="box-2" class="box-2">
+            <div class="div1">
+                <img class="rock" src="rock.png" alt="">
+            </div>
+            <div class="line-1"></div>
+            <div class="div2">
+                <img class="scissors" src="scissors.png" alt="">
+            </div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+            <div class="div3">
+                <img class="paper" src="paper.png" alt="">
+            </div>
+        </div>
+
+        <div id="box-3" class="box-3">
+            <div class="info">
+                <h3>YOU PICKED</h3><span style="display: none;" id="playerScore">0</span>
+                <div class="trial1" id="userResult">
+                    <div>
+                        <img class="rock" src="rock.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <h2 style="color: rgb(233, 33, 19);" id="result"></h2>
+                    <br/>
+                <button onclick="replay()"  class="play"> PLAY AGAIN </button>
+            </div>
+            <!-- <button onclick="location.href='index.html'" class="play"> PLAY AGAIN </button> -->
+            <!-- <button onclick="replay()" class="replay"> REPLAY </button> -->
+            <div class="info">
+                <h3>PC PICKED</h3><span style="display: none;" id="computerScore"></span>
+                <div class="trial2" id="pcResult">
+                    <img class="scissors" src="rock.png" alt="">
+                </div>
+            </div>
+        </div>
+<!-- <div class="btn"> -->
+    <button onclick="displayPopup()" class="rules-1">
+        RULES
+    </button>
+
+    <button onclick="location.href='index2.html'" class="next">
+        NEXT
+    </button>
+<!-- </div> -->
+
+        <div id="box-4" class="box-4">
+            <button class="close" onclick="closePopup()">X</button>
+            <div class="heading">
+                GAME RULES
+            </div>
+            <ul class="list">
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
+                    scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
